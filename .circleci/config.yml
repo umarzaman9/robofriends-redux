@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 jobs:
   umar:
     docker:
@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run: echo "trouble double"      
 workflow:
-  version: 2.1
+  version: 2
   umar_zaman:
     jobs:
       - umar
