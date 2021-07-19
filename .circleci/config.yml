@@ -2,19 +2,25 @@ version: 2.1
 jobs:
   umar:
     docker:
-      - image: circleco/ruby:2.4.1
+      - image: alpine:3.7
     steps:
-      - checkout
-      - run: echo "A first hello"
+      - run:
+          name: Umar
+          command: |
+            echo 'Hello Umar!'
+            echo 'This is the delivery pipeline'
   zaman:
     docker:
-      - image: circleco/ruby:2.4.1
+      - image: alpine:3.7
     steps:
-      - checkout
-      - run: echo "trouble double"      
-  workflow:
-    version: 2.1
-    umar_zaman:
-      jobs:
-        - umar
-        - zaman    
+      - run:
+          name: Zaman
+          command: |
+            echo 'Hello Zaman!'
+            echo 'This is the delivery pipeline'
+workflows:
+  version: 2.1
+  umar_and_zaman:
+    jobs:
+      - umar
+      - zaman
