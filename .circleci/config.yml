@@ -12,9 +12,9 @@ jobs:
     steps:
       - checkout
       - run: echo "trouble double"      
-  workflow:
-    version: 2.1
-    umar_zaman:
-      jobs:
-        - umar
-        - zaman    
+workflow:
+  version: 2.1
+  umar_zaman:
+    jobs:
+      - umar
+      - zaman    
