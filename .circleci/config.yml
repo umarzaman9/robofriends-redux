@@ -20,6 +20,6 @@ jobs:
             echo 'This is the delivery pipeline'
 workflows:
   version: 2.1
-  umar_zaman:
+  umar_and_zaman:
     - umar
     - zaman
