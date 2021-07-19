@@ -21,5 +21,6 @@ jobs:
 workflows:
   version: 2.1
   umar_and_zaman:
-    - umar
-    - zaman
+    jobs:
+      - umar
+      - zaman
