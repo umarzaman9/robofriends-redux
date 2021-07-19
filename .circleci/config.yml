@@ -1,0 +1,20 @@
+version: 2.1
+jobs:
+  umar:
+    docker:
+      - image: circleco/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "A first hello"
+  zaman:
+    docker:
+      - image: circleco/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "trouble double"      
+  workflow:
+    version: 2.1
+    umar_zaman:
+      jobs:
+        - umar
+        - zaman    
