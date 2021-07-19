@@ -1,11 +1,25 @@
 version: 2.1
 jobs:
-  build:
+  umar:
     docker:
       - image: alpine:3.7
     steps:
       - run:
-          name: The First Step
+          name: Umar
           command: |
-            echo 'Hello World!'
+            echo 'Hello Umar!'
             echo 'This is the delivery pipeline'
+  zaman:
+    docker:
+      - image: alpine:3.7
+    steps:
+      - run:
+          name: Zaman
+          command: |
+            echo 'Hello Zaman!'
+            echo 'This is the delivery pipeline'
+workflows:
+  version: 2.1
+  umar_zaman:
+    - umar
+    - zaman
